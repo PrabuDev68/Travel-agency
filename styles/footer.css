@@ -1,0 +1,41 @@
+:root{
+    --color: #333; 
+    }
+footer{
+    min-height:3vh;
+    background-color: white;
+    color :var(--color);
+    font-family: Arial;
+    padding:5px 10px;
+    
+  }
+  .blank,
+.other {
+  min-height: 30vh;
+  background-color: var(--color);
+  color:white;
+  padding : 50px 0px;
+}
+
+.credits-container
+{
+  display: flex;
+  justify-content: center;
+  
+}
+.credits{
+  margin:20px;
+}
+.content{
+  line-height: 20px;
+  color:#bdbdbd
+}
+.heading{
+  margin-bottom:10px;
+  font-size: 28px;
+}
+.separator{
+  border-top : 1px solid white;
+  width:100px;
+  margin-bottom:30px;
+}

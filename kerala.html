@@ -1,0 +1,598 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+:root{
+--color: #333; 
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  margin : 0;
+  padding-top: 50px;
+}
+
+.container {
+  text-align: center;
+  color: var(--color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://mediaindia.eu/wp-content/uploads/2018/08/f07013a8382f348a6f5c3bc4b27381d1.jpg);
+  background-size: cover;
+  background-position: center;
+  
+/*  this is where the magic happens:  */
+  background-attachment: fixed;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+p {
+  max-width: 52ch;
+  line-height: 1.5;
+  padding: 1em;
+}
+
+a {
+  display: inline-block;
+  padding: 1em 3.5em;
+  background-color: var(--color);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.3em;
+  font-weight: 700;
+  letter-spacing: .5px;
+  font-size: .875rem;
+}
+
+a:hover{
+  opacity:0.8;
+  transition : 0.3s;
+  background-color: #bdbdbd;
+  color:rgb(0,0,0);
+}
+.blank,
+.other {
+  min-height: 30vh;
+  background-color: var(--color);
+  color:white;
+  padding : 50px 0px;
+}
+
+.second {
+  background-image:url(https://live.staticflickr.com/2597/4203531788_a44974fc11_b.jpg);
+  background-attachment: fixed;
+  height: 1200px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 1em;
+}
+
+.card > a {
+  margin-bottom: 2em;
+}
+
+.item {
+  display: flex;
+  max-width: 320px;
+  background-color: white;;
+  flex-direction: column;
+  align-items: center;
+  border-radius: .5em;
+  -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+}
+
+.img {
+  width: 90%;
+  height: 200px;
+  background-color: lightgrey;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  border-radius: .3em;;
+}
+
+.img-first {
+  background-image: url(https://cdn.wallpapersafari.com/34/44/AK3RHL.jpg);
+}
+
+.img-second {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-lmfZbgg0D0HipN9INu2hyi1vPb4NsYmQYw&usqp=CAU);
+}
+
+.img-third {
+  background-image: url(data:image/jpeg;base64,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);
+}
+
+.second {
+  flex-direction: row;
+  gap: 1.6em;
+  
+}
+
+.blank-nill{
+  padding : 50px 0px;
+  background-color:transparent;
+
+}
+.blank-second{
+  max-height: 30vh;
+  background-color: var(--color);
+  color:white;
+  padding : 50px 0px;
+}
+.credits-container
+{
+  display: flex;
+  justify-content: center;
+  
+}
+.credits{
+  margin:20px;
+}
+.content{
+  line-height: 20px;
+  color:#bdbdbd
+}
+.heading{
+  margin-bottom:10px;
+  font-size: 28px;
+}
+.separator{
+  border-top : 1px solid white;
+  width:100px;
+  margin-bottom:30px;
+}
+
+footer{
+  min-height:3vh;
+  background-color: white;
+  color :var(--color);
+  font-family: Arial;
+  padding:5px 10px;
+  
+}
+
+
+.details-container
+{
+  margin : 50px 100px;
+}
+.days{
+  border : 3px  solid #000000;
+  border-radius : 15px;
+  margin : 10px 0px;
+  background-color: transparent;
+  text-align: left;
+  font-size: 20px;
+}
+.day{
+  margin:10px;
+  font-weight: bold;
+  color : rgb(48, 44, 14);
+}
+.plan{
+  margin : 10px;
+  color : rgba(0,0,0,255);
+  text-shadow: 2px 4px 4px rgba(194,82,6,0.4);
+}
+
+
+.enquire-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enquire-box h2 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.enquire-box input[type="text"],
+.enquire-box input[type="email"],
+.enquire-box input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  font-family: Arial, sans-serif;
+}
+
+.enquire-box input[type="submit"] {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enquire-box input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+.header{
+    height : 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+    font-family: Roboto , Arial;
+
+}
+
+
+
+.left-section{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    color:rgba(0, 0, 0, 0.911);
+    background-color: rgb(255, 255, 0);
+    margin:10px;
+    font-weight: 800;
+    border-radius: 12px;
+    padding:8px;
+
+}
+.hamburger-menu{
+    height:25px;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor:pointer;
+}
+.logo{
+    height:40px;
+    width:80px;
+}
+
+
+
+.middle-section{
+    flex:1;
+    margin-left:70px;
+    margin-right:35px;
+    max-width:500px;
+    display: flex;
+    align-items:center;
+}
+.search-bar{
+    flex:1;
+    height:36px;
+    padding-left:12px;
+    font-size: 16px;
+    border:1px solid rgb(255,255,0);
+    border-radius:3px;
+    box-shadow :inset 1px 2px 5px rgba(0,0,0,0.05);
+    width:0;
+    border-right: none;
+}
+.search-bar:hover{
+    background-color : white;
+}
+.search-bar::placeholder{
+    font-family:Roboto,Arial;
+    font-size:16px;
+    text-align : center;
+    color:black;
+}
+.search-button{
+    height:44px;
+    width :66px;
+    background-color: rgb(255, 255, 0);
+    border: 2px solid rgb(0, 0, 0);
+    margin-left:-1px;
+    margin-right:10px;
+    border-radius: 3px;
+
+}
+
+.search-button:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.enquire-now:hover , .top-visited:hover ,.your-bookings:hover,.home:hover{
+    background-color: rgb(255, 255, 0);
+    cursor:pointer;
+    color:black;
+    transition: 0.3s;
+}
+
+.search-pic{
+    height:25px;
+    margin-top:5px;
+}
+
+
+
+.right-section{
+    width:490px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-right:18px;
+    flex-shrink: 0;
+}
+.enquire-now,.your-bookings,.home{
+    background-color: rgb(0, 0, 0);
+    height:40px;
+    border-radius : 3px;
+    color:yellow;
+    font-weight: 800;
+}
+.right-section-container{
+    margin:0px 12px;
+}
+.top-visited{
+    color: rgb(0, 0, 0);
+    height:40px;
+    border-radius : 3px;
+    background-color:yellow;
+    font-weight: 800;
+}
+
+</style>
+</head>
+<body>
+
+
+  <div class = "header">
+    <div class = "left-section">
+        Spotless Journeys
+    </div>
+    <div class = "middle-section">
+        <input type = "text" class = "search-bar" placeholder="Where you want to go?">
+        <button class = "search-button">
+            <img src = "icons/binoculars-icon.svg" class = "search-pic">
+        </button>
+    </div>
+    <div class = "right-section">
+        <div class = "right-section-container">
+            <button class = "home" onclick="window.location.href = 'homepage.html'">Home</button></a>
+        </div>
+        
+        <div class = "right-section-container">
+          <button class = "enquire-now" onclick="window.location.href = 'enquire.html'">Enquire Now</button>
+        </div>
+
+        <div class = "right-section-container">
+            <button class = "top-visited">Top Visited</button>
+        </div>
+
+        <div class = "right-section-container">
+          <button class = "your-bookings" onclick="window.location.href = 'index.html'">Your Bookings</button>        </div>
+        
+    </div>
+</div>
+    <div class="container">
+        <h1>Kerala</h1>
+        <p style = "color: rgba(0,0,0,255); text-shadow: 2px 4px 4px rgba(0,0,0,0.2);">Discover the enchanting beauty of Kerala, where vibrant backwaters, verdant landscapes, and rich cultural heritage create an unforgettable experience.</p>
+        <a href="https://en.wikipedia.org/wiki/Kerala">Learn more</a>
+        <div class="blank-nill">
+
+          <div class = "details-container">
+  
+
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 1 : Cochin - Munnar (160 Kms. 03 ½ Hrs.)
+              </div>
+  
+              <div class = "plan">
+                After your arrival at Cochin Airport, our tour agent will greet and transfer you to Munnar, the gateway of hills in South India. On the way, visit the Cheeyappara Waterfalls and watch the lovely and bright blooms in blossom Garden. Later, go back to hotel, take rest for some time and investigate the magnificence of the nature. Move back to the hotel in Munnar for overnight stay.
+              </div>
+  
+            </div>
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 2 : Munnar
+              </div>
+  
+              <div class = "plan">
+                After breakfast, get ready for a morning touring trek to Munnar which incorporates, Mattupetty Dam, Eravikulam National Park, Echo Point, Kundala Dam, View Point and the Tea Gardens. Get back to the hotel for overnight stay in Munnar.
+              </div>
+  
+            </div>
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 3 : Munnar - Thekkady (110 Kms - 03 Hrs)
+              </div>
+  
+              <div class = "plan">
+                Take your breakfast and check-out from the inn. Move ahead to Thekkady. Get into the hotel and relax for sometime. After a short break, proceed for Thekkady tour which incorporates, Periyar Wildlife Sanctuary, Hill Station and Spice Plantation. Trekking, Bamboo Rafting and Elephant Ride. Spend your overnight stay at the hotel.              </div>
+            </div>          
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 4 : Thekkady - Cochin (190 Kms. - 04 Hrs.)
+              </div>
+  
+              <div class = "plan">
+                After your morning breakfast, check-out from the inn and exchange to Cochin Airport/Railway station. Get into the flight/train with a ton of sweet memories to reach your destination.            
+              </div> 
+            </div>
+            
+
+            
+            <div class = "days">
+  
+              <div class="day">
+                Day 6 : Icefield Parkway
+              </div>
+  
+              <div class = "plan">
+                After a quick breakfast, get into the hotel and relax for sometime. The journey will start towards the Icefield Parkway and you would be moving around the precipitous gorges, snowcapped summits and lakes of exquisite blues. Just stop at the ice field and stand on the ice. You would be able to look the glaciers face to face and also experience the Glacier adventure. Later, you will be stopped at Johnston Canyon to enjoy the real fun.
+              </div>     
+            </div>     
+          </div>
+  
+  
+        </div>
+    </div>
+      
+      <div class = "blank-second"> 
+            <center> <h2 style = "letter-spacing: 3px;"> What's Included ?</h2></center>
+      </div>
+      
+      <div class="container second">
+         
+       
+
+
+        <div class="item">
+            <div class="img img-second"></div>
+            <div class="card">
+              <h3>Day with Fishers</h3>
+              <p>Join a skilled fisherman for a thrilling day at sea, embracing the rhythm of the ocean and learning the art of fishing firsthand.</p>
+              <a href="https://canoekerala.com/blog/23/fishing-kerala">Learn more</a>
+            </div>
+          </div>
+
+
+        <div class="item">
+          <div class="img img-first"></div>
+          <div class="card">
+            <h3>Dense boating</h3>
+            <p>Embark on a captivating journey, boating through lush forested landscapes, immersing yourself in nature's tranquil embrace.</p>
+            <a href="https://en.wikipedia.org/wiki/Kettuvallam">Learn more</a>
+          </div>
+        </div>
+
+
+
+        <div class="item">
+          <div class="img img-third"></div>
+          <div class="card">
+            <h3>Periyar WLS</h3>
+            <p>Immerse yourself in the wonders of Periyar, as you embark on exhilarating safaris, witness majestic elephants, elusive tigers.</p>
+            <a href="https://en.wikipedia.org/wiki/Periyar_National_Park">Learn more</a>
+          </div>
+        </div>
+       
+
+        <div class="enquire-box" style ="display:block">
+            <h2>Enquire Now !</h2>
+            <form>
+              <input type="text" placeholder="Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="tel" placeholder="Phone Number" required>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+      </div>
+
+
+    
+      <div class="blank">
+        <div class = "credits-container">
+
+          <div class = "credits">
+
+            <div class = "heading">
+              Corporate Office
+            </div>
+
+            <div class = "separator">
+
+            </div>
+
+            <div class = "content">
+              <address> Sundara Travels Pvt LTD,<br>
+                NO. 6 , Kuruku Theru,<br>
+                Shanthi Colony, <br>
+                Chennai - 600028<br>
+                Tamilnadu, India</address>
+            </div>
+
+          </div>
+
+          <div class = "credits">
+            <div class = "heading">
+                Head Office
+            </div>
+
+            <div class = "separator">
+            </div>
+
+
+            <div class = "content">
+              <address> Sundara Travels Pvt LTD,<br>
+                  NO. 6 , Kuruku Theru,<br>
+                  Shanthi Colony, <br>
+                  Chennai - 600028<br>
+                  Tamilnadu, India</address>
+            </div>
+          </div>
+
+          <div class = "credits">
+
+          <div class = "heading">
+            Our Branches
+          </div>
+
+          <div class = "separator">
+          </div>
+
+          <div class = "content">
+            <address> Chennai<br>
+                Bangalore<br>
+                Coimbatore<br>
+                Delhi<br>
+                Hyderabad</address>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+      <footer> Copyright &copy; 2023 by Sundhara Travels Pvt Ltd. All Rights Reserved.</footer>
+
+
+  
+</body>
+</html>

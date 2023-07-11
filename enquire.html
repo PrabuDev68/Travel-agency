@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enquire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/enquirestyle.css">
+  </head>
+  <body>
+    <section class="contact">
+      <div class="content">
+        <h2>For Enquires</h2>
+        <p>Discover your next adventure with our travel agency's enquire web page. Simply fill out the form 
+          and let our experts tailor the perfect itinerary for your dream getaway, ensuring a seamless and 
+          personalized travel experience from start to finish.</p>
+      </div>
+      <div class="container">
+        <div class="contactinfo">
+          <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>Spotless Journeys Pvt Ltd<br>
+                No.6, Kuruku Theru,<br>
+                Shanthi Colony, chennai-28.
+              </p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>+91 9444444444</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>spotlessjourney@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactform">
+          <form onsubmit="sendEmail(); reset();return false;">
+            <h2>For Enquires</h2>
+            <div class="inputbox">
+              <input type="text" name="" required="required">
+              <span>Full Name</span>
+            </div>
+            <div class="inputbox">
+              <input type="text" name="" required="required">
+              <span>Email</span>
+            </div>
+            
+            <div class="inputbox">
+              <textarea required="required"></textarea>
+              <span>Type your Message...</span>
+            </div>
+
+            <div class="inputbox">
+              <input type="submit" name="" value="Send">
+              
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : document.getElementById("email").value,
+    Subject : "new contact form enquirey",
+    Body : "Name: "+ doucument.getElementById("name").value+"<br> Email: +doucument.getElementById("Email").value+<br>  Message: +doucument.getElementById("message").value}).then(
+  message => alert(message )
+);
+      }
+    </script>
+  </body>
+</html>

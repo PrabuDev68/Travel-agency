@@ -1,0 +1,593 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Pilgrimage Tour</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+:root{
+--color: #333; 
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  margin : 0;
+  padding-top: 50px;
+}
+
+.container {
+  text-align: center;
+  color: var(--color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://biverah.com/blog/wp-content/uploads/2022/08/rahul-chakraborty-cocesr8pMZ0-unsplash-1024x767.jpg);
+  background-size: cover;
+  background-position: center;
+  
+/*  this is where the magic happens:  */
+  background-attachment: fixed;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+p {
+  max-width: 52ch;
+  line-height: 1.5;
+  padding: 1em;
+}
+
+a {
+  display: inline-block;
+  padding: 1em 3.5em;
+  background-color: var(--color);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.3em;
+  font-weight: 700;
+  letter-spacing: .5px;
+  font-size: .875rem;
+}
+
+a:hover{
+  opacity:0.8;
+  transition : 0.3s;
+  background-color: #bdbdbd;
+  color:rgb(0,0,0);
+}
+.blank,
+.other {
+  min-height: 30vh;
+  background-color: var(--color);
+  color:white;
+  padding : 50px 0px;
+}
+
+.second {
+  background-image:url(https://www.triptipedia.com/tip/img/pSlfdUehX.jpg);
+  background-attachment: fixed;
+  height: 1200px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 1em;
+}
+
+.card > a {
+  margin-bottom: 2em;
+}
+
+.item {
+  display: flex;
+  max-width: 320px;
+  background-color: white;;
+  flex-direction: column;
+  align-items: center;
+  border-radius: .5em;
+  -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+}
+
+.img {
+  width: 90%;
+  height: 200px;
+  background-color: lightgrey;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  border-radius: .3em;;
+}
+
+.img-first {
+  background-image: url(https://qph.cf2.quoracdn.net/main-qimg-e5776c521c1afa809c1528a72b7ee292-lq);
+}
+
+.img-second {
+  background-image: url(https://img.traveltriangle.com/blog/wp-content/uploads/2018/04/Thiruvalluvar-Statue.jpg);
+}
+
+.img-third {
+  background-image: url(https://www.revv.co.in/blogs/wp-content/uploads/2020/05/Kollam.jpg);
+}
+
+.second {
+  flex-direction: row;
+  gap: 1.6em;
+  
+}
+
+.blank-nill{
+  padding : 50px 0px;
+  background-color:transparent;
+
+}
+.blank-second{
+  max-height: 30vh;
+  background-color: var(--color);
+  color:white;
+  padding : 50px 0px;
+}
+.credits-container
+{
+  display: flex;
+  justify-content: center;
+  
+}
+.credits{
+  margin:20px;
+}
+.content{
+  line-height: 20px;
+  color:#bdbdbd
+}
+.heading{
+  margin-bottom:10px;
+  font-size: 28px;
+}
+.separator{
+  border-top : 1px solid white;
+  width:100px;
+  margin-bottom:30px;
+}
+
+footer{
+  min-height:3vh;
+  background-color: white;
+  color :var(--color);
+  font-family: Arial;
+  padding:5px 10px;
+  
+}
+
+
+.details-container
+{
+  margin : 50px 100px;
+}
+.days{
+  border : 3px  solid #000000;
+  border-radius : 15px;
+  margin : 10px 0px;
+  background-color: transparent;
+  text-align: left;
+  font-size: 20px;
+}
+.day{
+  margin:10px;
+  font-weight: bold;
+  color : rgb(48, 44, 14);
+}
+.plan{
+  margin : 10px;
+  color : var(--color);
+}
+
+.enquire-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enquire-box h2 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.enquire-box input[type="text"],
+.enquire-box input[type="email"],
+.enquire-box input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  font-family: Arial, sans-serif;
+}
+
+.enquire-box input[type="submit"] {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enquire-box input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.header{
+    height : 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+    font-family: Roboto , Arial;
+
+}
+
+
+.left-section{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    color:rgba(0, 0, 0, 0.911);
+    background-color: rgb(255, 255, 0);
+    margin:10px;
+    font-weight: 800;
+    border-radius: 12px;
+    padding:8px;
+
+}
+.hamburger-menu{
+    height:25px;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor:pointer;
+}
+.logo{
+    height:40px;
+    width:80px;
+}
+
+
+
+.middle-section{
+    flex:1;
+    margin-left:70px;
+    margin-right:35px;
+    max-width:500px;
+    display: flex;
+    align-items:center;
+}
+.search-bar{
+    flex:1;
+    height:36px;
+    padding-left:12px;
+    font-size: 16px;
+    border:1px solid rgb(255,255,0);
+    border-radius:3px;
+    box-shadow :inset 1px 2px 5px rgba(0,0,0,0.05);
+    width:0;
+    border-right: none;
+}
+.search-bar:hover{
+    background-color : white;
+}
+.search-bar::placeholder{
+    font-family:Roboto,Arial;
+    font-size:16px;
+    text-align : center;
+    color:black;
+}
+.search-button{
+    height:44px;
+    width :66px;
+    background-color: rgb(255, 255, 0);
+    border: 2px solid rgb(0, 0, 0);
+    margin-left:-1px;
+    margin-right:10px;
+    border-radius: 3px;
+
+}
+
+.search-button:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.enquire-now:hover , .top-visited:hover ,.your-bookings:hover,.home:hover{
+    background-color: rgb(255, 255, 0);
+    cursor:pointer;
+    color:black;
+    transition: 0.3s;
+}
+
+.search-pic{
+    height:25px;
+    margin-top:5px;
+}
+
+
+
+.right-section{
+    width:490px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-right:18px;
+    flex-shrink: 0;
+}
+.enquire-now,.your-bookings,.home{
+    background-color: rgb(0, 0, 0);
+    height:40px;
+    border-radius : 3px;
+    color:yellow;
+    font-weight: 800;
+}
+.right-section-container{
+    margin:0px 12px;
+}
+.top-visited{
+    color: rgb(0, 0, 0);
+    height:40px;
+    border-radius : 3px;
+    background-color:yellow;
+    font-weight: 800;
+}
+
+</style>
+</head>
+<body>
+
+
+
+  <div class = "header">
+    <div class = "left-section">
+        Spotless Journeys
+    </div>
+    <div class = "middle-section">
+        <input type = "text" class = "search-bar" placeholder="Where you want to go?">
+        <button class = "search-button">
+            <img src = "icons/binoculars-icon.svg" class = "search-pic">
+        </button>
+    </div>
+    <div class = "right-section">
+        <div class = "right-section-container">
+            <button class = "home" onclick="window.location.href = 'homepage.html'">Home</button></a>
+        </div>
+        
+        <div class = "right-section-container">
+          <button class = "enquire-now" onclick="window.location.href = 'enquire.html'">Enquire Now</button>
+        </div>
+
+        <div class = "right-section-container">
+            <button class = "top-visited">Top Visited</button>
+        </div>
+
+        <div class = "right-section-container">
+          <button class = "your-bookings" onclick="window.location.href = 'index.html'">Your Bookings</button>        </div>
+        
+    </div>
+</div>
+    <div class="container">
+        <h1>South Pilgrimage Tour Package</h1>
+        <p>Discover the spiritual allure of South India on our Pilgrimage Tour Package, as you visit ancient temples, seek blessings, and delve into the rich religious traditions that define the region's profound cultural heritage.</p>
+        <a href="https://timesofindia.indiatimes.com/travel/destinations/south-indias-most-beautiful-places-to-explore/photostory/92442816.cms#:~:text=This%20part%20of%20India%20is,home%20to%20breathtaking%20scenic%20beauty.">Learn more</a>
+        <div class="blank-nill">
+
+          <div class = "details-container">
+  
+
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 1 : Madurai
+              </div>
+  
+              <div class = "plan">
+                After your arrival at Madurai Railway station or Airport, you will be picked by our tour representatives and transferred to the hotel. Get into the hotel and relax for sometime. In the evening, get ready for a sightseeing tour to Madurai. View the famous Meenakshi Sanctuary, Thirupparankundram Sanctuary, Thirumalai Nayakar Royal residence, Alagar Koil and Gandhi Display Center. Spend your overnight stay at the hotel in Madurai.
+              </div>
+  
+            </div>
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 2 : Madurai - Rameshwaram (175 KMS - 04 Hours drive)
+              </div>
+  
+              <div class = "plan">
+                Take your breakfast and move ahead to Rameshwaram. After the reach, get into the hotel and enjoy at your leisure. Move ahead for touring to Rameshwaram and visit Ramanathaswamy Sanctuary, Ramjharoka Temple, Agnitheertham, dhanushkodi and Adam's Scaffold. Return back to the hotel in Rameshwaram for overnight stay.              </div>
+  
+            </div>
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 3 : Rameshwaram - Kanyakumari (250 KMS - 06 Hours drive)
+              </div>
+  
+              <div class = "plan">
+                After morning breakfast check out from the lodging and drive to Kanyakumari. On reaching, check into the inn. In the noon, get ready for a tour to Kanyakumari and visit Devi Kanyakumari Sanctuary, Vivekananda Rock, Suchithram Sanctuary, Gandhi Dedication and Triveni Sangam. Spend your overnight stay by watching the lovely nightfall of Kanyakumari.              </div>
+            </div>          
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 4 : Kanyakumari - Trivandrum
+              </div>
+  
+              <div class = "plan">
+                After morning breakfast, check out from the hotel and drive to Trivandrum. On the way, visit the Sri Padmanabhapuram Castle and explore great knowledge. Check out the Sri Padmanabhaswamy Sanctuary in Trivandrum which is the wealthiest sanctuary on the planet, Historical Center, Secretariat and so on.            
+              </div> 
+            </div>
+            
+            <div class = "days">
+  
+              <div class="day">
+                Day 5 : Departure
+              </div>
+  
+              <div class = "plan">
+                Later, our tour representatives will drop you to the Air terminal/Track Station for forward trip.              </div> 
+            </div>
+            
+              
+          </div>
+  
+  
+        </div>
+    </div>
+      
+      <div class = "blank-second"> 
+            <center> <h2 style = "letter-spacing: 3px;"> What's Included ?</h2></center>
+      </div>
+      
+      <div class="container second">
+         
+       
+        <div class="item">
+          <div class="img img-first"></div>
+          <div class="card">
+            <h3>Delicious Foods</h3>
+            <p>A gastronomic paradise boasting a vibrant array of traditional South Indian dishes, aromatic spices, and culinary delights.</p>
+            <a href="https://www.treebo.com/blog/street-food-in-madurai/">Learn more</a>
+          </div>
+        </div>
+
+
+
+    
+        <div class="item">
+          <div class="img img-second"></div>
+          <div class="card">
+            <h3>Thiruvalluvar-Statue</h3>
+            <p>Standing tall at the southernmost tip of India, the majestic statue of Thiruvalluvar in Kanyakumari embodies wisdom, grace and spirit of knowledge.</p>
+            <a href="https://en.wikipedia.org/wiki/Thiruvalluvar_Statue">Learn more</a>
+          </div>
+        </div>
+
+
+
+        <div class="item">
+          <div class="img img-third"></div>
+          <div class="card">
+            <h3>Jatayu</h3>
+            <p>Symbolizing courage and valor, the sculpture of Jatayu in Kerala stands as a testament to the legendary bird's mythical role in the epic Ramayana.</p>
+            <a href="https://www.onmanorama.com/travel/kerala/2022/09/16/jatayu-earth-centre-sculpture-sights-activities.html">Learn more</a>
+          </div>
+        </div>
+
+        <div class="enquire-box" style ="display:block">
+          <h2>Enquire Now !</h2>
+          <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+    </div>
+       
+      </div>
+
+
+    
+      <div class="blank">
+        <div class = "credits-container">
+
+          <div class = "credits">
+
+            <div class = "heading">
+              Corporate Office
+            </div>
+
+            <div class = "separator">
+
+            </div>
+
+            <div class = "content">
+              <address> Sundara Travels Pvt LTD,<br>
+                NO. 6 , Kuruku Theru,<br>
+                Shanthi Colony, <br>
+                Chennai - 600028<br>
+                Tamilnadu, India</address>
+            </div>
+
+          </div>
+
+          <div class = "credits">
+            <div class = "heading">
+                Head Office
+            </div>
+
+            <div class = "separator">
+            </div>
+
+
+            <div class = "content">
+              <address> Sundara Travels Pvt LTD,<br>
+                  NO. 6 , Kuruku Theru,<br>
+                  Shanthi Colony, <br>
+                  Chennai - 600028<br>
+                  Tamilnadu, India</address>
+            </div>
+          </div>
+
+          <div class = "credits">
+
+          <div class = "heading">
+            Our Branches
+          </div>
+
+          <div class = "separator">
+          </div>
+
+          <div class = "content">
+            <address> Chennai<br>
+                Bangalore<br>
+                Coimbatore<br>
+                Delhi<br>
+                Hyderabad</address>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+      <footer> Copyright &copy; 2023 by Sundhara Travels Pvt Ltd. All Rights Reserved.</footer>
+
+
+</body>
+</html>

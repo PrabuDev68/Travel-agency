@@ -1,0 +1,615 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Rockies</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+:root{
+--color: #333; 
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  margin : 0;
+  padding-top: 50px;
+}
+
+.container {
+  text-align: center;
+  color: var(--color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
+  background-size: cover;
+  background-position: center;
+  
+/*  this is where the magic happens:  */
+  background-attachment: fixed;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+p {
+  max-width: 52ch;
+  line-height: 1.5;
+  padding: 1em;
+}
+
+a {
+  display: inline-block;
+  padding: 1em 3.5em;
+  background-color: var(--color);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.3em;
+  font-weight: 700;
+  letter-spacing: .5px;
+  font-size: .875rem;
+}
+
+a:hover{
+  opacity:0.8;
+  transition : 0.3s;
+  background-color: #bdbdbd;
+  color:rgb(0,0,0);
+}
+.blank,
+.other {
+  min-height: 30vh;
+  background-color: var(--color);
+  color:white;
+  padding : 50px 0px;
+}
+
+.second {
+  background-image:url(https://images.unsplash.com/photo-1514496959998-c01c40915c5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-attachment: fixed;
+  height: 1200px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 1em;
+}
+
+.card > a {
+  margin-bottom: 2em;
+}
+
+.item {
+  display: flex;
+  max-width: 320px;
+  background-color: white;;
+  flex-direction: column;
+  align-items: center;
+  border-radius: .5em;
+  -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+}
+
+.img {
+  width: 90%;
+  height: 200px;
+  background-color: lightgrey;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  border-radius: .3em;;
+}
+
+.img-first {
+  background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+}
+
+.img-second {
+  background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
+}
+
+.img-third {
+  background-image: url(https://images.unsplash.com/photo-1632853073412-782bf0279d65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+}
+
+.second {
+  flex-direction: row;
+  gap: 1.6em;
+  
+}
+
+.blank-nill{
+  padding : 50px 0px;
+  background-color:transparent;
+
+}
+.blank-second{
+  max-height: 30vh;
+  background-color: var(--color);
+  color:white;
+  padding : 50px 0px;
+}
+.credits-container
+{
+  display: flex;
+  justify-content: center;
+  
+}
+.credits{
+  margin:20px;
+}
+.content{
+  line-height: 20px;
+  color:#bdbdbd
+}
+.heading{
+  margin-bottom:10px;
+  font-size: 28px;
+}
+.separator{
+  border-top : 1px solid white;
+  width:100px;
+  margin-bottom:30px;
+}
+
+footer{
+  min-height:3vh;
+  background-color: white;
+  color :var(--color);
+  font-family: Arial;
+  padding:5px 10px;
+  
+}
+
+
+.details-container
+{
+  margin : 50px 100px;
+}
+.days{
+  border : 3px  solid #000000;
+  border-radius : 15px;
+  margin : 10px 0px;
+  background-color: transparent;
+  text-align: left;
+  font-size: 20px;
+}
+.day{
+  margin:10px;
+  font-weight: bold;
+  color : rgb(48, 44, 14);
+}
+.plan{
+  margin : 10px;
+  color : var(--color);
+}
+
+.enquire-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enquire-box h2 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.enquire-box input[type="text"],
+.enquire-box input[type="email"],
+.enquire-box input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  font-family: Arial, sans-serif;
+}
+
+.enquire-box input[type="submit"] {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enquire-box input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.header{
+    height : 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+    font-family: Roboto , Arial;
+
+}
+
+
+
+.left-section{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    color:rgba(0, 0, 0, 0.911);
+    background-color: rgb(255, 255, 0);
+    margin:10px;
+    font-weight: 800;
+    border-radius: 12px;
+    padding:8px;
+
+}
+.hamburger-menu{
+    height:25px;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor:pointer;
+}
+.logo{
+    height:40px;
+    width:80px;
+}
+
+
+
+.middle-section{
+    flex:1;
+    margin-left:70px;
+    margin-right:35px;
+    max-width:500px;
+    display: flex;
+    align-items:center;
+}
+.search-bar{
+    flex:1;
+    height:36px;
+    padding-left:12px;
+    font-size: 16px;
+    border:1px solid rgb(255,255,0);
+    border-radius:3px;
+    box-shadow :inset 1px 2px 5px rgba(0,0,0,0.05);
+    width:0;
+    border-right: none;
+}
+.search-bar:hover{
+    background-color : white;
+}
+.search-bar::placeholder{
+    font-family:Roboto,Arial;
+    font-size:16px;
+    text-align : center;
+    color:black;
+}
+.search-button{
+    height:44px;
+    width :66px;
+    background-color: rgb(255, 255, 0);
+    border: 2px solid rgb(0, 0, 0);
+    margin-left:-1px;
+    margin-right:10px;
+    border-radius: 3px;
+
+}
+
+.search-button:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.enquire-now:hover , .top-visited:hover ,.your-bookings:hover,.home:hover{
+    background-color: rgb(255, 255, 0);
+    cursor:pointer;
+    color:black;
+    transition: 0.3s;
+}
+
+.search-pic{
+    height:25px;
+    margin-top:5px;
+}
+
+
+
+.right-section{
+    width:490px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-right:18px;
+    flex-shrink: 0;
+}
+.enquire-now,.your-bookings,.home{
+    background-color: rgb(0, 0, 0);
+    height:40px;
+    border-radius : 3px;
+    color:yellow;
+    font-weight: 800;
+}
+.right-section-container{
+    margin:0px 12px;
+}
+.top-visited{
+    color: rgb(0, 0, 0);
+    height:40px;
+    border-radius : 3px;
+    background-color:yellow;
+    font-weight: 800;
+}
+
+</style>
+</head>
+<body>
+
+
+
+  <div class = "header">
+    <div class = "left-section">
+        Spotless Journeys
+    </div>
+    <div class = "middle-section">
+        <input type = "text" class = "search-bar" placeholder="Where you want to go?">
+        <button class = "search-button">
+            <img src = "icons/binoculars-icon.svg" class = "search-pic">
+        </button>
+    </div>
+    <div class = "right-section">
+        <div class = "right-section-container">
+            <button class = "home" onclick="window.location.href = 'homepage.html'">Home</button></a>
+        </div>
+        
+        <div class = "right-section-container">
+          <button class = "enquire-now" onclick="window.location.href = 'enquire.html'">Enquire Now</button>
+        </div>
+
+        <div class = "right-section-container">
+            <button class = "top-visited">Top Visited</button>
+        </div>
+
+        <div class = "right-section-container">
+          <button class = "your-bookings" onclick="window.location.href = 'index.html'">Your Bookings</button>        </div>
+        
+    </div>
+</div>
+    <div class="container">
+        <h1>Canadian Rockies</h1>
+        <p>Experience the awe-inspiring beauty of the Canadian Rockies on our immersive tour package, featuring stunning landscapes, turquoise lakes, and exhilarating outdoor adventures.</p>
+        <a href="https://en.wikipedia.org/wiki/Canada">Learn more</a>
+        <div class="blank-nill">
+
+          <div class = "details-container">
+  
+
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 1 : Arrival Toronto -City tour
+              </div>
+  
+              <div class = "plan">
+                After your arrival at Toronto Airport, our tour representatives will meet 
+                and transfer you to the hotel. Get ready for a city tour to Toronto.
+                You will be visiting the home of the Stanley Cup and the Hockey 
+                Hall of Fame. Ensure to check out the Rogers Centre which is 
+                considered to be the dynamic and versatile entertainment centre in 
+                the world. Proceed to famous CN Tower where you need to travel in 
+                the glass elevator to the 1,122 foot glass floored outdoor observation 
+                deck. Just enjoy a great time in this amazing city.
+              </div>
+  
+            </div>
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 2 : Ottawa City tour
+              </div>
+  
+              <div class = "plan">
+                After a quick breakfast, get ready to visit the Kingston. Upon your arrival, you will be enjoying a cruise of the 1000 islands from Kingston that offers a great insight of the destination. Later, move to Ottawa and visit the Parliament Hill which is regarded as the seat of Canada’s national government. Visit The Rideau Canal, Ontario's first UNESCO World Heritage Site and much more.
+              </div>
+  
+            </div>
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 3 : Montreal - the Paris of North America.
+              </div>
+  
+              <div class = "plan">
+                Take your breakfast and get into a luxurious coach to drive to Montreal. Visit the beautiful Notre Dame which is known for its paintings, statues, beautiful interior, gold-tipped polychrome carvings, rich altarpiece and much more. You can take some photo shots on top of Mont Royal and overlook Montreal from the top.            
+              </div>
+            </div>          
+  
+  
+            <div class = "days">
+  
+              <div class="day">
+                Day 4 : Quebec
+              </div>
+  
+              <div class = "plan">
+                After your breakfast, drive to Quebec for a great city tour. Our tour guide will narrate you the history and tour you to the walled city in North America. Ensure to check out the Parliament Buildings, Upper and Lower Towns, the Plains of Abraham, Chateau Frontenac, Place d'Armes, the Citadel and Quebec National Assembly.
+            
+              </div> 
+            </div>
+            
+            <div class = "days">
+  
+              <div class="day">
+                Day 5 : Quebec-Calgary
+              </div>
+  
+              <div class = "plan">
+                Take your American breakfast in the morning. Board a flight to Calgary and get the assistance of our tour representatives. You would be visiting one of the most beautiful cities of Canada. Just look over the magnificent Heritage Park, the Olympic Park and much more. Get transferred to beautiful city of Banff with its charming streets and spectacular natural beauty.
+              </div> 
+            </div>
+            
+            <div class = "days">
+  
+              <div class="day">
+                Day 6 : Icefield Parkway
+              </div>
+  
+              <div class = "plan">
+                After a quick breakfast, get into the hotel and relax for sometime. The journey will start towards the Icefield Parkway and you would be moving around the precipitous gorges, snowcapped summits and lakes of exquisite blues. Just stop at the ice field and stand on the ice. You would be able to look the glaciers face to face and also experience the Glacier adventure. Later, you will be stopped at Johnston Canyon to enjoy the real fun.
+              </div>     
+            </div>     
+          </div>
+  
+  
+        </div>
+    </div>
+      
+      <div class = "blank-second"> 
+            <center> <h2 style = "letter-spacing: 3px;"> What's Included ?</h2></center>
+      </div>
+      
+      <div class="container second">
+         
+       
+        <div class="item">
+          <div class="img img-first"></div>
+          <div class="card">
+            <h3>Rock climbing</h3>
+            <p>The goal is to reach the summit of a formation or the endpoint of a usually pre-defined route without falling</p>
+            <a href="https://en.wikipedia.org/wiki/Rock_climbing">Learn more</a>
+          </div>
+        </div>
+
+
+
+    
+        <div class="item">
+          <div class="img img-second"></div>
+          <div class="card">
+            <h3>Caving</h3>
+            <p>Exploring underground through networks of tunnels and passageways, which can be natural or artificial.</p>
+            <a href="https://en.wikipedia.org/wiki/Caving">Learn more</a>
+          </div>
+        </div>
+
+
+
+        <div class="item">
+          <div class="img img-third"></div>
+          <div class="card">
+            <h3>Parachuting</h3>
+            <p>Jumping from an aeroplane and falling through the air before opening your parachute.</p>
+            <a href="https://en.wikipedia.org/wiki/Parachuting">Learn more</a>
+          </div>
+        </div>
+
+        <div class="enquire-box" style ="display:block">
+          <h2>Enquire Now !</h2>
+          <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+    </div>
+       
+      </div>
+
+
+    
+      <div class="blank">
+        <div class = "credits-container">
+
+          <div class = "credits">
+
+            <div class = "heading">
+              Corporate Office
+            </div>
+
+            <div class = "separator">
+
+            </div>
+
+            <div class = "content">
+              <address> Sundara Travels Pvt LTD,<br>
+                NO. 6 , Kuruku Theru,<br>
+                Shanthi Colony, <br>
+                Chennai - 600028<br>
+                Tamilnadu, India</address>
+            </div>
+
+          </div>
+
+          <div class = "credits">
+            <div class = "heading">
+                Head Office
+            </div>
+
+            <div class = "separator">
+            </div>
+
+
+            <div class = "content">
+              <address> Sundara Travels Pvt LTD,<br>
+                  NO. 6 , Kuruku Theru,<br>
+                  Shanthi Colony, <br>
+                  Chennai - 600028<br>
+                  Tamilnadu, India</address>
+            </div>
+          </div>
+
+          <div class = "credits">
+
+          <div class = "heading">
+            Our Branches
+          </div>
+
+          <div class = "separator">
+          </div>
+
+          <div class = "content">
+            <address> Chennai<br>
+                Bangalore<br>
+                Coimbatore<br>
+                Delhi<br>
+                Hyderabad</address>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+      <footer> Copyright &copy; 2023 by Sundhara Travels Pvt Ltd. All Rights Reserved.</footer>
+
+
+  
+</body>
+</html>
